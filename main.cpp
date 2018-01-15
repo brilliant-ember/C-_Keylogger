@@ -19,4 +19,10 @@ int main() {
 int Save(int _key, char *file) {
 	cout << _key << endl;
 
+	FILE *OUTPUT_FILE;
+
+	OUTPUT_FILE = fopen(file, "a+");
+	fprintf(OUTPUT_FILE, "%s", &_key);
+	fclose(OUTPUT_FILE);
+	return 0;
 }
